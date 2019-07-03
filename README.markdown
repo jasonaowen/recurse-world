@@ -112,6 +112,15 @@ and then enable web services on the
 Add your username to the `.env` file:
 `GEONAMES_USER=<your_username>`
 
+To show map data from
+[Mapbox](https://www.mapbox.com/),
+the front end needs a Mapbox
+[public access token](https://docs.mapbox.com/help/glossary/access-token/).
+[Create a new user account](https://account.mapbox.com/auth/signup/),
+and then add the default public token from your account page
+to the `.env` file:
+`MAPBOX_ACCESS_TOKEN=<public_access_token>`.
+
 Run the script to populate the database
 in your [Python Virtual Environment](#python-virtual-environment):
 
@@ -120,6 +129,29 @@ in your [Python Virtual Environment](#python-virtual-environment):
 ```
 
 It should print out how many people were added.
+
+### Build the front end
+
+The HTML and JavaScript that the Flask app will serve needs to be built.
+
+First, install the dependencies:
+
+```sh
+$ npm install
+```
+
+Then, make sure you've sourced your `.env` file,
+so that the build can bundle in your Mapbox token:
+
+```sh
+$ source .env
+```
+
+Finally, run the build:
+
+```sh
+$ npm run build
+```
 
 ### Start the Flask App
 
@@ -148,7 +180,7 @@ in your [Python Virtual Environment](#python-virtual-environment):
 
 Now, your local instance of Recurse World
 with live data from the RC API
-will be available at http://127.0.0.1:5000/api/geo.json .
+will be available at http://127.0.0.1:5000/ .
 
 
 ![Licensed under the AGPL, version 3](https://img.shields.io/badge/license-AGPL3-blue.svg)
