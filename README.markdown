@@ -121,5 +121,34 @@ in your [Python Virtual Environment](#python-virtual-environment):
 
 It should print out how many people were added.
 
+### Start the Flask App
+
+When running in development mode,
+the app does not require authentication.
+
+If you are working on the RC OAuth integration,
+you will need to
+[create an OAuth app in your RC Settings](https://www.recurse.com/settings/apps).
+Then, update the `.env`
+to include the generated client ID and the client secret:
+`CLIENT_ID=<your_client_id>` and `CLIENT_SECRET=<your_client_secret>`.
+Otherwise, those variables can remain set to the placeholder values
+(but must still be present and non-empty).
+
+The `CLIENT_CALLBACK` URL variable must include
+the port number the Flask instance will be running on,
+which defaults to port 5000. Update this URL in your `.env` file
+if using a different port.
+
+Start the Flask API
+in your [Python Virtual Environment](#python-virtual-environment):
+```sh
+(venv)$ flask run
+```
+
+Now, your local instance of Recurse World
+with live data from the RC API
+will be available at http://127.0.0.1:5000/api/geo.json .
+
 
 ![Licensed under the AGPL, version 3](https://img.shields.io/badge/license-AGPL3-blue.svg)
