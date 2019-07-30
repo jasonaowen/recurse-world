@@ -1,3 +1,16 @@
+# Project Archived
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+[@jaryncolbert](https://github.com/jaryncolbert) built the
+[World of Recurse Map](https://github.com/jaryncolbert/recurse-world-map),
+which is now running at [world.recurse.com](https://world.recurse.com)!
+I will be putting my energy towards that project instead of this one.
+
+I'll leave the [Heroku app](https://recurse-world.herokuapp.com) running,
+but I don't intend to make any changes, and
+if it breaks at some point then I'll take it offline rather than fix it.
+
 # World of Recursers
 
 A world map of where Recurse Center alumni live.
